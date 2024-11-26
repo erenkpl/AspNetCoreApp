@@ -10,6 +10,7 @@ namespace AspNetCoreApp.Controllers
             return View();
         }
 
+        // localhost/Home/Eren
         public IActionResult Eren() // Eren.cshtml dosyasını yönetir. Views/Home/ içinde
         {
             return View();

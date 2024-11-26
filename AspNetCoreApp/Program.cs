@@ -22,9 +22,10 @@ app.UseRouting();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllerRoute(
-        name:"default",
-        pattern: "{Controller}/{Action}" //Urldeki ilk '/' i controller olarak al, sonraki '/'i Action olarak al
+    _ = endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{Controller}/{Action}", // Urldeki ilk '/' i controller olarak al, sonraki '/'i Action olarak al.
+        defaults: new {Controller = "Home", Action = "Index"} // Eðer boþ bir url gelirse, default olarak home controllerýndan index action'ýný çaðýr.
         );
 });
 

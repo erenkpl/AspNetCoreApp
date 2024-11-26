@@ -1,9 +1,36 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    int age = 25;
+    //string value = string.Empty;
+    //if(age>18){
+    //    value = "Yasi 18'den buyuk.";
+    //}
+    //else{
+    //    value = "Yasi 18'den kucuk.";
+    //}
+
+    int Calculate(int number1, int number2)
+    {
+        return number1 + number2;
+    }
+
+    var result = Calculate(4, 9);
+
+    List<string> names = new() { "Eren", "Kerim", "Fadıl", "Hayri", "Berkay" };
+}
+
+@foreach (var item in names)
+{ // Tek satır olduğu için @ işareti kullandık, fonksiyon içinde de olsa variable'ı (razor) @ işareti ile göstermeliyiz.
+    <p>
+        @(item == "Eren"? "SE Eren":item)
+    </p>
 }
 
 <p>
-    Merhaba ben de Eren dosyasiyim.
+    Merhaba ben Eren dosyasiyim.
+</p>
+<p>
+    Durum = @(age>18?"Yası 18'den buyuk":"Yasi 18'den buyuk.")
+</p>
+<p>
+    Sonuc = @result
 </p>
